@@ -22,7 +22,7 @@ Variables
   /* lighter shades of primary color */
   --clr-primary-6: hsl(185, 57%, 50%);
   --clr-primary-7: hsl(184, 65%, 59%);
-  --clr-primary-8: hsl(184, 80%, 74%);
+  --clr-primary-8: #570031;
   --clr-primary-9: hsl(185, 94%, 87%);
   --clr-primary-10: #ffc0cb;
   /* darkest grey - used for headings */
@@ -144,7 +144,7 @@ p {
   border-radius: var(--radius);
 }
 .btn:hover {
-  color: var(--clr-primary-1);
+  color: var(--clr-primary-9);
   background: var(--clr-primary-8);
 }
 .center-btn {
@@ -177,6 +177,12 @@ p {
   background: var(--clr-primary-5);
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .underline {
+    margin-top: 15px;
+  }
 }
 .section-title {
   margin-bottom: 4rem;
@@ -436,7 +442,7 @@ img {
 }
 
 img.circle {
-  width: 330px;
+  width: 350px;
   border-radius: 52% 48% 42% 58% / 31% 30% 70% 69%;
   -webkit-transform: translateY(100px);
   -moz-transform: translateY(100px);
@@ -482,6 +488,16 @@ img.circle {
     display: block;
     grid-row: 1/1;
     grid-column: 6/-1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  img.circle {
+    width: 300px;
+  }
+  img {
+    margin-bottom: 250px;
+    margin-left: 10px;
   }
 }
 @media screen and (min-width: 1170px) {
