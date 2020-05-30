@@ -1,11 +1,45 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
-import Projects from "../components/Projects";
-// ...GatsbyImageSharpFluid
+import Events from "../components/Events";
 
-const ProjectsPage = () => {
-  return <h2>events page</h2>;
+const EventsPage = ({ data }) => {
+  const {
+    allStrapiEvents: { nodes: events },
+  } = data;
+  return (
+    <Layout>
+      <section className="projects-page">
+        <Events events={events} title="all events" />
+      </section>
+    </Layout>
+  );
 };
 
-export default ProjectsPage;
+export const query = graphql`
+  {
+    allStrapiEvents {
+      nodes {
+        id
+        title
+        venue
+        description
+        date
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        event_tag {
+          id
+          title
+        }
+      }
+      totalCount
+    }
+  }
+`;
+
+export default EventsPage;

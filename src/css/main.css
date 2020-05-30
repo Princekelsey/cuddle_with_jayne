@@ -141,7 +141,7 @@ p {
   border: 2px solid transparent;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius);
+  border-radius: 16px;
 }
 .btn:hover {
   color: var(--clr-primary-9);
@@ -179,11 +179,11 @@ p {
   margin-right: auto;
 }
 
-@media screen and (max-width: 992px) {
+/* @media screen and (max-width: 992px) {
   .underline {
     margin-top: 15px;
   }
-}
+} */
 .section-title {
   margin-bottom: 4rem;
   text-align: center;
@@ -437,12 +437,9 @@ Hero
   display: block;
 }
 
-img {
-  margin-bottom: 230px;
-}
-
 img.circle {
-  width: 350px;
+  width: 400px;
+  margin-bottom: 230px;
   border-radius: 52% 48% 42% 58% / 31% 30% 70% 69%;
   -webkit-transform: translateY(100px);
   -moz-transform: translateY(100px);
@@ -493,11 +490,10 @@ img.circle {
 
 @media screen and (max-width: 992px) {
   img.circle {
-    width: 300px;
-  }
-  img {
+    /* width: 300px;
     margin-bottom: 250px;
-    margin-left: 10px;
+    margin-left: 10px; */
+    display: none;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -686,6 +682,13 @@ Projects
   opacity: 0.85;
   transition: var(--transition);
 }
+
+@media screen and (max-width: 992px) {
+  .project-img::after {
+    opacity: 0;
+  }
+}
+
 .project:hover .project-img::after {
   opacity: 0;
 }
@@ -1072,4 +1075,16 @@ Blog Template
   width: 15rem;
   height: 15rem;
   margin: 3rem 0;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--clr-primary-5) !important;
+}
+
+.img-circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
 }

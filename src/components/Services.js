@@ -1,13 +1,9 @@
 import React from "react";
 import Title from "./Title";
-import Slider from "react-slick";
+
 import services from "../constants/services";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 const Services = () => {
-  const settings = {
-    dots: true,
-  };
   return (
     <section className="section bg-grey">
       <Title title="we talk about" />
