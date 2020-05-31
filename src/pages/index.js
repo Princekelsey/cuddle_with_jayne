@@ -13,6 +13,7 @@ export default ({ data }) => {
   console.log(data);
   const {
     allStrapiEvents: { nodes: events },
+    allStrapiBlogs: { nodes: blogs },
   } = data;
 
   return (
@@ -21,6 +22,7 @@ export default ({ data }) => {
       <Services />
       <Testmoines />
       <Events events={events} title="recent events" showLink />
+      <Blogs blogs={blogs} title="featured posts" showLink />
     </Layout>
   );
 };
@@ -44,6 +46,23 @@ export const query = graphql`
         event_tag {
           id
           title
+        }
+      }
+    }
+    allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
+      nodes {
+        date(formatString: "MMM Do, YYYY")
+        slug
+        description
+        id
+        title
+        category
+        topimage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

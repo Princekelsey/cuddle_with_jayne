@@ -1072,9 +1072,10 @@ Blog Template
   border-radius: var(--radius);
 }
 .blog-template img {
-  width: 15rem;
+  /* width: 15rem;
   height: 15rem;
-  margin: 3rem 0;
+  margin: 3rem 0; */
+  width: 100%;
 }
 
 .slick-prev:before,
