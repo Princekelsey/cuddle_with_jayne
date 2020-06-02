@@ -10,7 +10,6 @@ import Blogs from "../components/Blogs";
 //import "../css/main.css";
 
 export default ({ data }) => {
-  console.log(data);
   const {
     allStrapiEvents: { nodes: events },
     allStrapiBlogs: { nodes: blogs },

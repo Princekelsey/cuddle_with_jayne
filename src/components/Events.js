@@ -8,12 +8,12 @@ const Events = ({ events, title, showLink }) => {
       <Title title={title} />
       <div className="section-center projects-center">
         {events.map((event) => {
-          return <Event event={event} key={event.id} />;
+          return <Event {...event} key={event.id} />;
         })}
       </div>
       {showLink && (
         <Link to="/events" className="btn center-btn">
-          events
+          all events
         </Link>
       )}
     </section>

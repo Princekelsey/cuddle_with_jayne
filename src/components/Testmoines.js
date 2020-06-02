@@ -46,7 +46,7 @@ const Testmoines = () => {
   };
 
   return (
-    <section className="section">
+    <section className="section testimonies">
       <Title title="testimonies" />
       <div style={{ paddingRight: "40px", paddingLeft: "40px" }}>
         <Slider {...settings}>

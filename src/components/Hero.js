@@ -32,8 +32,8 @@ const Hero = () => {
             <div className="underline"></div>
             <h1>I'm Jane</h1>
             <h4>
-              A 'm baby meditation tofu chillwave,<br></br> distillery messenger
-              bag thundercats <br></br> chicharrones kale chips gochujang.
+              A meditation tofu chillwave,<br></br> distillery messenger bag
+              thundercats <br></br> chicharrones kale chips gochujang.
               <br></br> Banh mi direct trade marfa salvia
             </h4>
             <Link to="/contact" className="btn">

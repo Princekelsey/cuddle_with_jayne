@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Image from "gatsby-image";
 import { Link } from "gatsby";
-const Blog = ({ blog }) => {
-  const { category, date, description, slug, title, topimage, id } = blog;
+const Blog = ({ category, date, description, slug, title, topimage, id }) => {
   return (
     <Link to={`/blogs/${slug}`} key={id} className="blog">
       <article>
-        <Image fluid={topimage.childImageSharp.fluid} className="blog-img" />
+        {topimage && (
+          <Image fluid={topimage.childImageSharp.fluid} className="blog-img" />
+        )}
         <div className="blog-card">
           <h4>{title}</h4>
           <p>{description}</p>
@@ -21,6 +22,14 @@ const Blog = ({ blog }) => {
   );
 };
 
-Blog.propTypes = {};
+Blog.propTypes = {
+  category: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  topimage: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
+};
 
 export default Blog;

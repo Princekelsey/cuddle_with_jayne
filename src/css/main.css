@@ -159,6 +159,10 @@ p {
   padding: 5rem 0;
 }
 
+.testimonies {
+  background-color: var(--clr-primary-10);
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
@@ -438,8 +442,9 @@ Hero
 }
 
 img.circle {
-  width: 400px;
-  margin-bottom: 230px;
+  /* width: 400px; */
+  /* margin-bottom: 230px; */
+  margin-bottom: 10rem;
   border-radius: 52% 48% 42% 58% / 31% 30% 70% 69%;
   -webkit-transform: translateY(100px);
   -moz-transform: translateY(100px);
@@ -929,8 +934,19 @@ About Page
   padding: 7rem 0;
 }
 .about-img {
-  margin-bottom: 2rem;
-  height: 25rem;
+  margin-bottom: 10rem;
+  /* height: 30rem; */
+  /* width: 400px; */
+  /* margin-bottom: 330px; */
+  border-radius: 52% 48% 42% 58% / 31% 30% 70% 69%;
+  /* -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s; */
+  transition: all 0.5s;
 }
 .about-text .section-title {
   margin-bottom: 2rem;
@@ -976,6 +992,14 @@ About Page
     grid-column: 6 / -1;
   }
 }
+
+/* @media screen and (max-width: 992px) {
+  .about-img {
+    grid-column: 1 / span 5;
+    margin-bottom: 100px;
+    width: auto;
+  }
+} */
 /*
 ===============
 Contact Page

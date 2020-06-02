@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Image from "gatsby-image";
 import { FaGithubSquare, FaShareSquare, FaRegPlayCircle } from "react-icons/fa";
-const Event = ({ event }) => {
-  const { date, description, event_tag, image, title, venue } = event;
+const Event = ({ date, description, event_tag, image, title, venue }) => {
   return (
     <article className="project">
-      <Image fluid={image.childImageSharp.fluid} className="project-img" />
+      {image && (
+        <Image fluid={image.childImageSharp.fluid} className="project-img" />
+      )}
       <div className="project-info">
         <h3>{title}</h3>
         <p className="job-date">{date}</p>
@@ -26,6 +27,13 @@ const Event = ({ event }) => {
   );
 };
 
-Event.propTypes = {};
+Event.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  event_tag: PropTypes.array.isRequired,
+  image: PropTypes.object.isRequired,
+  venue: PropTypes.string.isRequired,
+};
 
 export default Event;
