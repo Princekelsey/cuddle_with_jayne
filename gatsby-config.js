@@ -6,12 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
-    twitterUsername: "@john_smilga",
-    image: "/twitter-img.png",
-    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+    title: "Cuddlewithjayne",
+    description: "This is mentorship and coaching site",
+    author: "@prince",
+    // twitterUsername: "",
+    // image: "",
+    siteUrl: "https://cuddlewithjayne.com",
   },
   plugins: [
     `gatsby-transformer-sharp`,
@@ -33,8 +33,6 @@ module.exports = {
           : "http://localhost:1337",
         queryLimit: 1000, // Default to 100
         contentTypes: [`testimonies`, `events`, `blogs`],
-        //singleTypes:[`about` ]
-        //contentTypes: [`jobs`, `projects`, `blogs`],
         singleTypes: [`about`],
       },
     },

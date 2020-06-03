@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import Events from "../components/Events";
 import { Pagination } from "antd";
+import SEO from "../components/SEO";
 
 const EventsPage = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,6 +26,7 @@ const EventsPage = ({ data }) => {
   }, [currentPage, postPerPage]);
   return (
     <Layout>
+      <SEO title="Events" />
       <section className="projects-page">
         <Events events={paginatedEvent} title="all events" />
         <Pagination

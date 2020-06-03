@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import Blogs from "../components/Blogs";
 import { Pagination } from "antd";
+import SEO from "../components/SEO";
 
 const Blog = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -25,6 +26,7 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <section className="blog-page">
         <Blogs blogs={paginatedPost} title="all blogs" />
         <Pagination

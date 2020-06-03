@@ -1,13 +1,15 @@
 import React from "react";
 import Layout from "../components/Layout";
+import SEO from "../components/SEO";
 
 const contact = () => {
   return (
     <Layout>
+      <SEO title="Contact" />
       <section className="contact-page">
         <article className="contact-form">
           <h3>get in touch</h3>
-          <form action="https://formspree.io/mqkyqbao" method="POST">
+          <form method="POST" data-netlify="true" name="contact">
             <div className="form-group">
               <input
                 type="text"
@@ -27,6 +29,9 @@ const contact = () => {
                 placeholder="message"
                 className="form-control"
               ></textarea>
+              <div style={{ paddingTop: "10px" }}>
+                <div data-netlify-recaptcha="true"></div>
+              </div>
             </div>
             <button type="submit" className="submit-btn btn">
               {" "}

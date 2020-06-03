@@ -341,7 +341,7 @@ Sidebar
   border-radius: var(--radius);
 }
 .sidebar-links li a:hover {
-  background: var(--clr-primary-9);
+  background: var(--clr-primary-10);
   color: var(--clr-primary-5);
 }
 .close-btn {

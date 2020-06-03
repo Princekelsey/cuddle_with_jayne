@@ -6,6 +6,7 @@ import SEO from "../components/SEO";
 const Error = () => {
   return (
     <Layout>
+      <SEO title="404" />
       <main className="error-page">
         <div className="error-container">
           <h2>Oops! The page your are looking for does not exist</h2>

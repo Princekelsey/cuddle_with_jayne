@@ -7,6 +7,7 @@ import Services from "../components/Services";
 import Testmoines from "../components/Testmoines";
 import Events from "../components/Events";
 import Blogs from "../components/Blogs";
+import SEO from "../components/SEO";
 //import "../css/main.css";
 
 export default ({ data }) => {
@@ -17,6 +18,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Home" description="this is the home page" />
       <Hero />
       <Services />
       <Testmoines />
