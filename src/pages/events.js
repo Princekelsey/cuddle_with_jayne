@@ -1,16 +1,45 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import Events from "../components/Events";
+import { Pagination } from "antd";
 
 const EventsPage = ({ data }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+
   const {
-    allStrapiEvents: { nodes: events },
+    allStrapiEvents: { nodes: events, totalCount },
   } = data;
+
+  const postPerPage = 3;
+
+  const onChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const paginatedEvent = useMemo(() => {
+    const lastIndex = currentPage * postPerPage;
+    const firstIndex = lastIndex - postPerPage;
+
+    return events.slice(firstIndex, lastIndex);
+  }, [currentPage, postPerPage]);
   return (
     <Layout>
       <section className="projects-page">
-        <Events events={events} title="all events" />
+        <Events events={paginatedEvent} title="all events" />
+        <Pagination
+          defaultCurrent={currentPage}
+          onChange={onChange}
+          total={totalCount}
+          pageSize={postPerPage}
+          hideOnSinglePage={true}
+          style={{
+            paddingBottom: "25px",
+            paddingTop: "0",
+            marginTop: "0",
+            textAlign: "center",
+          }}
+        />
       </section>
     </Layout>
   );

@@ -21,7 +21,7 @@ export default ({ data }) => {
       <Services />
       <Testmoines />
       <Events events={events} title="recent events" showLink />
-      <Blogs blogs={blogs} title="featured posts" showLink />
+      <Blogs blogs={blogs} title="featured articles" showLink />
     </Layout>
   );
 };
