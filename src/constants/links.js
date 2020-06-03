@@ -24,7 +24,7 @@ const data = [
   {
     id: 5,
     text: "contact",
-    url: "/contact/",
+    url: "/contact",
   },
 ];
 

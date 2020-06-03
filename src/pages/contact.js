@@ -10,7 +10,7 @@ const contact = () => {
         <article className="contact-form">
           <h3>get in touch</h3>
           <form
-            action="POST"
+            method="POST"
             data-netlify="true"
             name="contact"
             data-netlify-recaptcha="true"
