@@ -3,13 +3,12 @@ import Image from "gatsby-image";
 import { Link } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
 import { Row, Col, Card } from "antd";
-import heroImg from "../assets/pic3.jpg";
+
 import SocialLinks from "../constants/socialLinks";
-import Typical from "react-typical";
 
 const querry = graphql`
   {
-    file(relativePath: { eq: "hero-main.png" }) {
+    file(relativePath: { eq: "pic3.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
@@ -43,8 +42,7 @@ const Hero = () => {
     <section>
       <Row gutter={0}>
         <Col xs={24} sm={24} lg={24} xl={14} md={24}>
-          {" "}
-          <img src={heroImg} alt="hero" style={{ width: "100%" }} />
+          <Image fluid={fluid} style={{ width: "100%" }} />
         </Col>
         <Col xs={24} sm={24} lg={24} xl={10} md={24}>
           <div className="card-hero">

@@ -1,20 +1,38 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { graphql, Link } from "gatsby";
-import { Row, Col, Divider } from "antd";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import { Row, Col } from "antd";
 import Title from "../components/Title";
 import Image from "gatsby-image";
 import SEO from "../components/SEO";
-import heroImg from "../assets/pic2.jpg";
-import SocialLinks from "../constants/socialLinks";
 import Typical from "react-typical";
 
-const About = ({
-  data: {
-    about: { nodes },
-  },
-}) => {
-  const { title, info, image } = nodes[0];
+const querry = graphql`
+  {
+    file(relativePath: { eq: "pic2.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
+
+const About = (
+  {
+    // data: {
+    //   about: { nodes },
+    // },
+  }
+) => {
+  // const { title, info, image } = nodes[0];
+
+  const {
+    file: {
+      childImageSharp: { fluid },
+    },
+  } = useStaticQuery(querry);
   const steps = [
     "is a revivalist",
     4000,
@@ -34,13 +52,13 @@ const About = ({
 
       <section>
         <div className="section-center">
-          <Title title={title} />
+          <Title title="About Me" />
         </div>
 
         <Row gutter={16}>
           <Col xs={24} sm={24} lg={12} xl={12}>
             {" "}
-            <img src={heroImg} alt="hero" style={{ width: "100%" }} />
+            <Image fluid={fluid} style={{ width: "100%" }} />
           </Col>
           <Col xs={24} sm={24} lg={12} xl={12}>
             <div style={{ marginTop: "70px", margin: "10px" }}>
@@ -80,22 +98,22 @@ const About = ({
   );
 };
 
-export const query = graphql`
-  {
-    about: allStrapiAbout {
-      nodes {
-        title
-        info
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   {
+//     about: allStrapiAbout {
+//       nodes {
+//         title
+//         info
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default About;
