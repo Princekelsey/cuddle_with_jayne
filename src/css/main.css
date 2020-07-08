@@ -69,6 +69,7 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
   margin-top: 5rem;
+  overflow-x: hidden;
 }
 ul {
   list-style-type: none;
@@ -127,6 +128,15 @@ p {
   }
 }
 /*  global classes */
+
+.card-hero {
+  margin-top: 35%;
+}
+@media screen and (max-width: 1024px) {
+  .card-hero {
+    margin-top: 5%;
+  }
+}
 
 .btn {
   text-transform: uppercase;
@@ -223,7 +233,7 @@ Navbar
 ===============
 */
 
-.navbar {
+.navbar-main {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,8 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Image from "gatsby-image";
+import { Row, Col, Divider } from "antd";
 import { Link } from "gatsby";
 const Blog = ({ category, date, description, slug, title, topimage, id }) => {
+  console.log(topimage);
+
   return (
     <Link to={`/blogs/${slug}`} key={id} className="blog">
       <article>

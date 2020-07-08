@@ -5,7 +5,7 @@ import PageLinks from "../constants/links";
 import { Link } from "gatsby";
 const Navbar = ({ toggleSideBar }) => {
   return (
-    <nav className="navbar">
+    <nav className="navbar-main">
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">

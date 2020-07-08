@@ -8,6 +8,7 @@ import Testmoines from "../components/Testmoines";
 import Events from "../components/Events";
 import Blogs from "../components/Blogs";
 import SEO from "../components/SEO";
+
 //import "../css/main.css";
 
 export default ({ data }) => {
@@ -20,10 +21,10 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Home" description="this is the home page" />
       <Hero />
-      <Services />
+      {/* <Services />
       <Testmoines />
       <Events events={events} title="recent events" showLink />
-      <Blogs blogs={blogs} title="featured articles" showLink />
+      <Blogs blogs={blogs} title="featured articles" showLink /> */}
     </Layout>
   );
 };
