@@ -11,18 +11,30 @@ const data = [
     text: "about",
     url: "/about/",
   },
+
   {
     id: 3,
+    text: "talks",
+    url: "/talks",
+  },
+  {
+    id: 4,
     text: "events",
     url: "/events/",
   },
   {
-    id: 4,
+    id: 5,
     text: "blog",
     url: "/blog/",
   },
+
   {
-    id: 5,
+    id: 6,
+    text: "testimonies",
+    url: "/testimonies",
+  },
+  {
+    id: 7,
     text: "contact",
     url: "/contact",
   },

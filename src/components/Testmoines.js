@@ -31,7 +31,7 @@ const Testmoines = () => {
     dotsClass: "slick-dots slick-thumb",
     infinite: true,
     //lazyLoad: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -59,12 +59,14 @@ const Testmoines = () => {
                     style={{
                       display: "flex",
                       justifyContent: "center",
-                      marginBottom: "15px",
+                      // marginBottom: "15px",
                     }}
                   >
                     <img src={avatar} alt="testimony" className="img-circle" />
                   </div>
-                  <p style={{ textAlign: "center" }}>{text}</p>
+                  <p style={{ textAlign: "center", fontSize: "24px" }}>
+                    {text}
+                  </p>
                 </div>
               </div>
             );

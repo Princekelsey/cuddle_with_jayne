@@ -37,6 +37,13 @@ module.exports = {
       },
     },
     {
+      resolve: "@debiki/gatsby-plugin-talkyard",
+      options: {
+        talkyardServerUrl:
+          "https://comments-for-cuddlewithjayne-com.talkyard.net",
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [

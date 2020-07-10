@@ -3,6 +3,7 @@ import Image from "gatsby-image";
 import { Link } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
 import { Row, Col, Card } from "antd";
+import Typical from "react-typical";
 
 import SocialLinks from "../constants/socialLinks";
 
@@ -32,19 +33,55 @@ const Hero = () => {
     4000,
     "a social worker",
     4000,
-    "a human capital development expert",
+    "is a human capital development expert",
     4000,
     "is the founder, Women Safe House Initiative and Cuddlewithjayne Foundation",
     4000,
   ];
 
   return (
-    <section>
-      <Row gutter={0}>
+    <section className="hero-container ">
+      <div className="hero-image">
+        <Image fluid={fluid} style={{ width: "100%" }} />
+      </div>
+      <div className="hero-text">
+        <h4 style={{ color: "#fff", marginTop: "15px", marginLeft: "1rem" }}>
+          Jane Nnanna{" "}
+          <strong style={{ color: "#ed0086" }}>
+            <Typical loop={Infinity} wrapper="b" steps={steps} />
+          </strong>
+        </h4>
+        <h3
+          style={{
+            color: "#fff",
+            paddingLeft: "1rem",
+            fontSize: "24px",
+            paddingTop: "10px",
+            textTransform: "none",
+          }}
+        >
+          I'm Jane.
+          <br /> I'm hungry for more of Jesus, passionate about life and you!{" "}
+          <br /> <br />
+          Founder of Women Safe House Initiative and Cuddlewithjayne Foundation.
+        </h3>
+        <div style={{ marginTop: "10px", paddingLeft: "1rem" }}>
+          <Link
+            to="/about"
+            className="btn"
+            style={{ marginTop: "10px", paddingLeft: "1rem" }}
+          >
+            learn more
+          </Link>
+        </div>
+
+        <SocialLinks styleClass="social-links-hero" />
+      </div>
+      {/* <Row gutter={0}>
         <Col xs={24} sm={24} lg={24} xl={14} md={24}>
           <Image fluid={fluid} style={{ width: "100%" }} />
         </Col>
-        <Col xs={24} sm={24} lg={24} xl={10} md={24}>
+        <Col xs={24} sm={24} lg={24} xl={10} md={24} className="hero-text">
           <div className="card-hero">
             <Card style={{ width: "100%", color: "#ffff" }} bordered={false}>
               <h3>
@@ -61,7 +98,7 @@ const Hero = () => {
             </Card>
           </div>
         </Col>
-      </Row>
+      </Row> */}
     </section>
 
     // <header className="hero">

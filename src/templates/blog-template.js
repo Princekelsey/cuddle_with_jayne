@@ -3,9 +3,10 @@ import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import ReactMarkdown from "react-markdown";
 import SEO from "../components/SEO";
+import TalkyardCommentsIframe from "@debiki/gatsby-plugin-talkyard";
 
 const ComponentName = ({ data }) => {
-  const { content, title, description } = data.blog;
+  const { content, title, description, id } = data.blog;
   return (
     <Layout>
       <SEO title={title} description={description} />
@@ -25,6 +26,9 @@ const ComponentName = ({ data }) => {
           <Link to="/blog" className="btn center-btn">
             back to blogs
           </Link>
+          <div style={{ paddingTop: "20px" }}>
+            <TalkyardCommentsIframe discussionId={id} />
+          </div>
         </div>
       </section>
     </Layout>
@@ -37,6 +41,7 @@ export const query = graphql`
       content
       title
       description
+      id
     }
   }
 `;

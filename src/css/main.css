@@ -138,6 +138,61 @@ p {
   }
 }
 
+.hero-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hero-text {
+  height: 400px;
+  width: 700px;
+  background-color: #05347e;
+  position: absolute;
+
+  top: 40%;
+  color: #fff;
+  left: 75%;
+  /* text-align: center; */
+  z-index: 500;
+  transform: translate(-50%, -50%);
+}
+
+.hero-image {
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 95%;
+  }
+  .hero-text {
+    top: 0;
+    left: 0;
+    position: relative;
+    transform: none;
+    width: 100%;
+    height: auto;
+    /* text-align: center; */
+  }
+  .hero-text h3 {
+    margin-top: 10px;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text .social-link {
+    display: none;
+  }
+}
+
 .btn {
   text-transform: uppercase;
   background: var(--clr-primary-5);
@@ -176,6 +231,7 @@ p {
 
 .testimonies {
   background-color: var(--clr-primary-10);
+  /* height: 100%; */
 }
 
 .section-center {
@@ -219,6 +275,15 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
+.social-links-hero {
+  padding-left: 1rem;
+}
+
+.hero-text .social-link {
+  color: var(--clr-white);
+}
+
 .social-link {
   font-size: 1.75rem;
   color: var(--clr-grey-1);
