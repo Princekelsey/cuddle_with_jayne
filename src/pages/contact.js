@@ -38,7 +38,7 @@ const Contact = () => {
         <article className="contact-form">
           <h3>get in touch</h3>
           <form
-            action="https://formspree.io/mqkyqbao"
+            action={`https://formspree.io/${process.env.GATSBY_FORM_API_KEY}`}
             method="POST"
             onSubmit={submitForm}
           >

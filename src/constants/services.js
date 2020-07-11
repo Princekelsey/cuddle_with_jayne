@@ -7,12 +7,12 @@ export default [
     title: "Mental Development",
     text: `The world is growing at the speed of light. Advances in technology, science and social media is sky rocketing. Need to expand your mental capacity to catch up with trends? Unlock your potentials by tapping into the power of your minds through our specially curated events, workshops, trainings, conferences and personalized study packages with seasoned experts and profassionals that will  completely blow the cap off your capacity and bring you to  a whole new level.`,
   },
-  {
-    id: 1,
-    icon: <FaCode className="service-icon" />,
-    title: "Spirtual Development",
-    text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
-  },
+  // {
+  //   id: 1,
+  //   icon: <FaCode className="service-icon" />,
+  //   title: "Spirtual Development",
+  //   text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+  // },
   {
     id: 3,
     icon: <FaAndroid className="service-icon" />,

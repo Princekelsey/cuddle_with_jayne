@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Image from "gatsby-image";
-import { Row, Col, Divider } from "antd";
 import { Link } from "gatsby";
 const Blog = ({ category, date, description, slug, title, topimage, id }) => {
   console.log(topimage);
@@ -13,7 +12,7 @@ const Blog = ({ category, date, description, slug, title, topimage, id }) => {
           <Image fluid={topimage.childImageSharp.fluid} className="blog-img" />
         )}
         <div className="blog-card">
-          <h4>{title}</h4>
+          <h4 style={{ textTransform: "capitalize" }}>{title}</h4>
           <p>{description}</p>
           <div className="blog-footer">
             <p>{category}</p>

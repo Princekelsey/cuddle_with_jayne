@@ -6,14 +6,18 @@ import SEO from "../components/SEO";
 import TalkyardCommentsIframe from "@debiki/gatsby-plugin-talkyard";
 
 const ComponentName = ({ data }) => {
-  const { content, title, description, id } = data.blog;
+  const { content, title, description, id, author } = data.blog;
   return (
     <Layout>
       <SEO title={title} description={description} />
       <section className="blog-template">
         <div className="section-center">
           <article className="blog-content">
-            <h2>{title}</h2>
+            <h2>
+              {title}
+              {/* <span style={{ fontSize: "14px" }}>by {author}</span> */}
+            </h2>
+
             <ReactMarkdown
               source={content}
               transformImageUri={(url) =>
@@ -26,7 +30,7 @@ const ComponentName = ({ data }) => {
           <Link to="/blog" className="btn center-btn">
             back to blogs
           </Link>
-          <div style={{ paddingTop: "20px" }}>
+          <div style={{ paddingTop: "40px" }}>
             <TalkyardCommentsIframe discussionId={id} />
           </div>
         </div>
